@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,100..900;1,8..30,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+$primary: #F7F5F2;
+$secondary: #E3DFE0;
+$tertiary: #4D4243;
+$accent: #CFC80C;
+
+@mixin headerStyle1($weight, $size, $lineHeight) {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $lineHeight;
+}
+
+@mixin headerStyle2($weight, $size, $lineHeight) {
+    font-family: 'Piazzolla', serif;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $lineHeight;
+    font-style: italic;
+}
+
+@mixin bodyStyle() {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: auto;
+    color: $tertiary;
+}
