@@ -1,0 +1,14 @@
+mixin article(image, link, subtitle, title, category1, category2)
+    article 
+        div 
+            img(src=image)
+            a(href=link)
+                button Read more
+        div 
+            h4= subtitle 
+            h3= title 
+            div 
+                div.category 
+                    p= category1
+                div.category
+                    p= category2

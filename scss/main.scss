@@ -33,3 +33,7 @@ body {
 a {
     @include headerStyle2(300, 16px, auto);
 }
+
+#work {
+    background: $secondary;
+}

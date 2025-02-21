@@ -5,7 +5,34 @@ html(lang="en")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title Hadley Slucher
         link(rel="shortcut icon" href="../images/favicon.png" type="image/x-icon")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css")
         link(rel="stylesheet" href="../dist/css/main.css")
     body
         include includes/nav
+
+        section#work 
+        
+            include includes/article
+
+            +article("../images/fileworks/header.jpg", "../fileworks", "Fileworks", "Introducing a new document management tool", "UI/UX Design", "Web Development")
+
+            +article("../images/paradox/header.jpg", "../paradox", "The Paradox Show", "A monthly showcase of creativity", "Web Design", "Wordpress Development")
+
+            +article("../images/dcim/header.jpg", "../dcim", "DCIM", "Empowering tech company’s digital infrastructure", "UI/UX Design", "Web Development")
+
+            +article("../images/pharmcbd/header.jpg", "../pharmcbd", "Pharm CBD", "Bringing CBD to another level", "Web Design", "Wordpress Development")
+
+        section#about 
+            h3 About 
+            h2 Hadley is a Chicago based web designer and developer.
+            div 
+                div 
+                    img(src="../images/headshot.jpg" alt="headshot")
+                div
+                    div 
+                        h3 Education 
+                        h3 Tech Skills
+                    div 
+                        h3 Experience
+
         include includes/footer
