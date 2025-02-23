@@ -23,6 +23,7 @@ h3 {
   font-size: 18px;
   line-height: auto;
   font-style: italic;
+  margin-block-start: 0.5em;
   margin-block-end: 0.5em;
 }
 
@@ -39,6 +40,7 @@ h5 {
   font-size: 13px;
   line-height: auto;
   font-style: italic;
+  margin-block-end: 0.5em;
 }
 
 body {
@@ -149,4 +151,8 @@ button {
   justify-content: flex-start;
   align-items: baseline;
   gap: 0;
+}
+
+footer {
+  padding: 30px;
 }/*# sourceMappingURL=main.css.map */
