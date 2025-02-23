@@ -34,6 +34,72 @@ a {
     @include headerStyle2(300, 16px, auto);
 }
 
+.category {
+    @include headerStyle2(300, 15px, auto);
+}
+
+/* --------------------
+       General
+----------------------- */
+
+.category {
+    border: 1px solid $tertiary;
+    padding: 10px 20px;
+    border-radius: 50px;
+    width: fit-content;
+}
+
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.flexContainer {
+    @include flexContainer();
+}
+
+.smallGap {
+    gap: 10px;
+}
+
+button {
+    background: $accent;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    @include headerStyle2(300, 16px, auto);
+    color: $tertiary;
+}
+
+
+/* --------------------
+       Portfolio
+----------------------- */
+
 #work {
     background: $secondary;
 }
+
+.imgContainer {
+    width: 100%;
+}
+
+.imgContainer a img {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+    position: relative;
+}
+
+.textContainer {
+    padding: 0 30px 30px;
+}
+
+article h2 {
+    margin-block-start: 0.5em;
+}
+
+article h3 {
+    margin-block-end: 0.5em;
+}
+

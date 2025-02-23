@@ -27,3 +27,11 @@ $accent: #CFC80C;
     line-height: auto;
     color: $tertiary;
 }
+
+@mixin flexContainer($justify: flex-start, $align: baseline, $gap: 30px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
