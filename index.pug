@@ -22,17 +22,40 @@ html(lang="en")
 
             +article("../images/pharmcbd/header.jpg", "../pharmcbd", "Pharm CBD", "Bringing CBD to another level", "Web Design", "Wordpress Development")
 
-        section#about 
-            h3 About 
-            h2 Hadley is a Chicago based web designer and developer.
+        section#about
+            div.textContainer 
+                h3 About 
+                h2 Hadley is a Chicago based web designer and developer.
             div 
-                div 
+                div.imgContainer 
                     img(src="../images/headshot.jpg" alt="headshot")
                 div.flexContainer
-                    div 
-                        h3 Education 
+                    div.textContainer 
+                        include includes/resume-item
+                        h3 Education
+                        ul 
+                            +resume-item("Code Louisville ", "JavaScript, 2020")
+                            +resume-item("Code Louisville ", "Front-End Development, 2020")
+                            +resume-item("Asbury University ", "B.A. in Media Communications, 2018")
                         h3 Tech Skills
-                    div 
+                        ul
+                            li Adobe Creative Cloud
+                            li Figma
+                            li HTML
+                            li CSS
+                            li JavaScript
+                            li Git
+                            li Github
+                            li Visual Studio Code
+                            li WordPress
+                    div.textContainer 
                         h3 Experience
+                        ul 
+                            +resume-item("Web Designer ", "Freelance, Present")
+                            +resume-item("UI/UX Designer ", "OrangePeople, 2021-2023")
+                            +resume-item("Web Designer ", "Noteworthy Creative Group, 2018-2021")
+                            +resume-item("Creative Director ", "Asbury Collegian, 2017-2018")
+                            +resume-item("Web Producer ", "Real Medicine Foundation, 2015-2018")
+                            +resume-item("Design Intern ", "Kworq, 2017")
 
         include includes/footer

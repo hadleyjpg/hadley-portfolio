@@ -28,9 +28,10 @@ $accent: #CFC80C;
     color: $tertiary;
 }
 
-@mixin flexContainer($justify: flex-start, $align: baseline, $gap: 30px) {
+@mixin flexContainer($direction: row, $justify: flex-start, $align: baseline, $gap: 30px) {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
     gap: $gap;
