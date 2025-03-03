@@ -68,6 +68,31 @@ a {
   font-style: italic;
 }
 
+@media (min-width: 1025px) {
+  h1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 500;
+    font-size: 74px;
+    line-height: 90px;
+  }
+  h2 {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: auto;
+    margin-block-start: 0;
+    margin-block-end: 0.5em;
+  }
+  h3 {
+    font-family: "Piazzolla", serif;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: auto;
+    font-style: italic;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+  }
+}
 /* --------------------
        General
 ----------------------- */
@@ -111,9 +136,59 @@ button {
 }
 
 /* --------------------
+       Navigation
+----------------------- */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+/* --------------------
+       Hero
+----------------------- */
+#hero {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: end;
+  gap: 30px;
+  width: 80%;
+  margin: 0 auto;
+  min-height: 70vh;
+}
+
+#hero h1 {
+  width: 80%;
+}
+
+/* --------------------
        Portfolio
 ----------------------- */
 #work {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 2em;
   background: #E3DFE0;
 }
 
@@ -133,11 +208,39 @@ button {
   padding: 0 30px 30px;
 }
 
+@media (min-width: 1025px) {
+  #work {
+    padding: 4em;
+    margin-left: 10%;
+  }
+  article button {
+    display: none;
+  }
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    border-bottom: 1px solid #4D4243;
+  }
+  .imgContainer {
+    flex: 1 1 300px;
+  }
+  .textContainer {
+    flex: 2 1 300px;
+  }
+  .imgContainer img {
+    height: 300px;
+  }
+}
 /* --------------------
          About
 ----------------------- */
 #about .textContainer {
-  padding: 0 30px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 #about {
@@ -154,5 +257,6 @@ button {
 }
 
 footer {
-  padding: 30px;
+  width: 80%;
+  margin: 0 auto;
 }/*# sourceMappingURL=main.css.map */

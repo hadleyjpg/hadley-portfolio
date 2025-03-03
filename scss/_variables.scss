@@ -4,6 +4,8 @@ $primary: #F7F5F2;
 $secondary: #E3DFE0;
 $tertiary: #4D4243;
 $accent: #CFC80C;
+$padding-lg: 4em;
+$border: 1px solid $tertiary;
 
 @mixin headerStyle1($weight, $size, $lineHeight) {
     font-family: 'Space Grotesk', sans-serif;
@@ -35,4 +37,9 @@ $accent: #CFC80C;
     justify-content: $justify;
     align-items: $align;
     gap: $gap;
+}
+
+@mixin pageWidth () {
+    width: 80%;
+    margin: 0 auto;
 }

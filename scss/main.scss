@@ -42,6 +42,24 @@ a {
     @include headerStyle2(300, 15px, auto);
 }
 
+@media (min-width: 1025px) {
+    h1 {
+        @include headerStyle1(500, 74px, 90px);
+    }
+    
+    h2 {
+        @include headerStyle1(500, 50px, auto);
+        margin-block-start: 0;
+        margin-block-end: 0.5em;
+    }
+    
+    h3 {
+        @include headerStyle2(300, 28px, auto);
+        margin-block-start: 0.5em;
+        margin-block-end: 0.5em;
+    }
+}
+
 /* --------------------
        General
 ----------------------- */
@@ -75,12 +93,42 @@ button {
     color: $tertiary;
 }
 
+/* --------------------
+       Navigation
+----------------------- */
+
+header {
+    @include flexContainer($justify: space-between, $align: center, $gap: 0);
+    @include pageWidth();
+}
+
+nav ul {
+    @include flexContainer($justify: space-between, $align: center);
+    list-style-type: none;
+    padding-inline-start: 0;
+
+}
+
+/* --------------------
+       Hero
+----------------------- */
+
+#hero {
+    @include flexContainer($align: end);
+    @include pageWidth();
+    min-height: 70vh;
+}
+
+#hero h1 {
+    width: 80%;
+}
 
 /* --------------------
        Portfolio
 ----------------------- */
 
 #work {
+    @include flexContainer($direction: column, $gap: 2em);
     background: $secondary;
 }
 
@@ -99,12 +147,40 @@ button {
     padding: 0 30px 30px;
 }
 
+@media (min-width: 1025px) {
+    #work {
+        padding: $padding-lg;
+        margin-left: 10%;
+    }
+
+    article button {
+        display: none;
+    }
+
+    article {
+        @include flexContainer($align: center);
+        border-bottom: $border;
+    }
+
+    .imgContainer {
+        flex: 1 1 300px;
+    }
+
+    .textContainer {
+        flex: 2 1 300px;
+    }
+    
+    .imgContainer img {
+        height: 300px;
+    }
+}
+
 /* --------------------
          About
 ----------------------- */
 
 #about .textContainer {
-    padding: 0 30px;
+    @include pageWidth();
 }
 
 #about {
@@ -116,5 +192,5 @@ button {
 }
 
 footer {
-    padding: 30px;
+    @include pageWidth();
 }
