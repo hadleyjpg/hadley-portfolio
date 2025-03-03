@@ -145,8 +145,11 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: 0;
-  width: 80%;
-  margin: 0 auto;
+  padding: 0 10%;
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+  background: #F7F5F2;
 }
 
 nav ul {
@@ -170,8 +173,13 @@ nav ul {
   justify-content: flex-start;
   align-items: end;
   gap: 30px;
-  width: 80%;
-  margin: 0 auto;
+  padding: 0 10%;
+  min-height: 70vh;
+  position: fixed;
+  z-index: -1;
+}
+
+.scrollContainer {
   min-height: 70vh;
 }
 
@@ -223,6 +231,8 @@ nav ul {
     justify-content: flex-start;
     align-items: center;
     gap: 30px;
+  }
+  #work article:not(:last-child) {
     border-bottom: 1px solid #4D4243;
   }
   .imgContainer {
@@ -239,12 +249,12 @@ nav ul {
          About
 ----------------------- */
 #about .textContainer {
-  width: 80%;
-  margin: 0 auto;
+  padding: 0 10%;
 }
 
 #about {
   padding-top: 30px;
+  background: #F7F5F2;
 }
 
 #about .flexContainer {
@@ -257,6 +267,5 @@ nav ul {
 }
 
 footer {
-  width: 80%;
-  margin: 0 auto;
+  padding: 0 10%;
 }/*# sourceMappingURL=main.css.map */
