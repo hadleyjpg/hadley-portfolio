@@ -1,12 +1,9 @@
 doctype html
 html(lang="en")
     head
-        meta(charset="UTF-8")
-        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        include includes/head 
+        
         title Hadley Slucher
-        link(rel="shortcut icon" href="../images/favicon.png" type="image/x-icon")
-        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css")
-        link(rel="stylesheet" href="../dist/css/main.css")
     body
         include includes/nav
 
@@ -31,7 +28,7 @@ html(lang="en")
             div.textContainer 
                 h3 About 
                 h2 Hadley is a Chicago based web designer and developer.
-            div 
+            div.resumeContainer 
                 div.imgContainer 
                     img(src="../images/headshot.jpg" alt="headshot")
                 div.flexContainer

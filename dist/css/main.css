@@ -5,7 +5,7 @@
 h1 {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
-  font-size: 50px;
+  font-size: 3.25em;
   line-height: 60px;
 }
 
@@ -13,7 +13,7 @@ h2 {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
   font-size: 30px;
-  line-height: auto;
+  line-height: normal;
   margin-block-start: 0.5em;
 }
 
@@ -21,7 +21,7 @@ h3 {
   font-family: "Piazzolla", serif;
   font-weight: 300;
   font-size: 18px;
-  line-height: auto;
+  line-height: normal;
   font-style: italic;
   margin-block-start: 0.5em;
   margin-block-end: 0.5em;
@@ -31,14 +31,14 @@ h4 {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 400;
   font-size: 22px;
-  line-height: auto;
+  line-height: normal;
 }
 
 h5 {
   font-family: "Piazzolla", serif;
   font-weight: 300;
   font-size: 13px;
-  line-height: auto;
+  line-height: normal;
   font-style: italic;
   margin-block-end: 0.5em;
 }
@@ -47,7 +47,7 @@ body {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  line-height: auto;
+  line-height: normal;
   color: #4D4243;
   background: #F7F5F2;
 }
@@ -56,7 +56,7 @@ a {
   font-family: "Piazzolla", serif;
   font-weight: 300;
   font-size: 16px;
-  line-height: auto;
+  line-height: normal;
   font-style: italic;
 }
 
@@ -64,7 +64,7 @@ a {
   font-family: "Piazzolla", serif;
   font-weight: 300;
   font-size: 15px;
-  line-height: auto;
+  line-height: normal;
   font-style: italic;
 }
 
@@ -79,7 +79,7 @@ a {
     font-family: "Space Grotesk", sans-serif;
     font-weight: 500;
     font-size: 50px;
-    line-height: auto;
+    line-height: normal;
     margin-block-start: 0;
     margin-block-end: 0.5em;
   }
@@ -87,7 +87,7 @@ a {
     font-family: "Piazzolla", serif;
     font-weight: 300;
     font-size: 28px;
-    line-height: auto;
+    line-height: normal;
     font-style: italic;
     margin-block-start: 0.5em;
     margin-block-end: 0.5em;
@@ -130,7 +130,7 @@ button {
   font-family: "Piazzolla", serif;
   font-weight: 300;
   font-size: 16px;
-  line-height: auto;
+  line-height: normal;
   font-style: italic;
   color: #4D4243;
 }
@@ -175,14 +175,13 @@ nav ul {
   gap: 30px;
   padding: 0 10%;
   min-height: 70vh;
-  position: fixed;
-  z-index: -1;
+  /* position: fixed;
+  z-index: -1; */
 }
 
-.scrollContainer {
-  min-height: 70vh;
-}
-
+/* .scrollContainer {
+    min-height: $hero-height;
+} */
 #hero h1 {
   width: 80%;
 }
@@ -216,6 +215,20 @@ nav ul {
   padding: 0 30px 30px;
 }
 
+#overview {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 2em;
+}
+
+@media (maz-width: 1025px) {
+  #overview .textContainer {
+    padding: 0 10%;
+  }
+}
 @media (min-width: 1025px) {
   #work {
     padding: 4em;
@@ -223,6 +236,9 @@ nav ul {
   }
   article button {
     display: none;
+  }
+  article:hover button {
+    display: block;
   }
   article {
     display: flex;
@@ -266,6 +282,26 @@ nav ul {
   gap: 0;
 }
 
+.resumeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 30px;
+}
+
+@media (min-width: 1025px) {
+  .resumeContainer {
+    padding: 0 10%;
+  }
+  .resumeContainer .imgContainer {
+    flex: 1 1 300px;
+  }
+  .resumeContainer .textContainer {
+    flex: 2 1 300px;
+  }
+}
 footer {
   padding: 0 10%;
 }/*# sourceMappingURL=main.css.map */

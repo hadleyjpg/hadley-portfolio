@@ -1,0 +1,80 @@
+doctype html
+html(lang="en")
+
+    block variables
+        - var pageTitle = 'Project Name'
+        - var tagLine = 'Project tagline'
+        - var overview = 'Overview paragraph'
+        - var projectDuration = 'Project duration'
+        - var role = 'Role'
+        - var tools = 'Tools'
+        - var overviewImgURL = '../images/default.jpg'
+        - var overviewImgAlt = ''
+        - var problem = ''
+        - var objectiveOne = ''
+        - var objectiveTwo = ''
+        - var objectiveThree = ''
+        - var userImgURL = ''
+        - var userOneName = ''
+        - var userOneDesc = ''
+        - var userTwoName = ''
+        - var userTwoDesc = ''
+        - var research = ''
+
+    head
+        include includes/head 
+        
+        title= pageTitle
+    body
+        include includes/nav
+
+        section#hero 
+            h1= tagLine
+
+        section#overview 
+            .textContainer 
+                h2 Overview 
+                p= overview 
+                .projectDetails 
+                    h3 Project Duration 
+                    p= projectDuration 
+
+                    h3 Role 
+                    p=role
+
+                    h3 Tools 
+                    p=tools 
+
+            .imgContainer
+                img(src= overviewImgURL alt= overviewImgAlt )
+
+        section#challenge 
+            div
+                h2 Problem/Challenges  
+                p= problem
+            div
+                h2 Objectives 
+                ul 
+                    li= objectiveOne
+                    li= objectiveTwo 
+                    li= objectiveThree
+
+        section#research 
+            .profilesContainer 
+                .userCard
+                    img(src= userImgURL )
+
+                    h3= userOneName 
+                    p= userOneDesc 
+
+                .userCard
+                    img(src= userImgURL ) 
+
+                    h3= userTwoName 
+                    p= userTwoDesc
+
+            .textContainer
+                h2 Research 
+                p= research
+
+        include includes/footer
