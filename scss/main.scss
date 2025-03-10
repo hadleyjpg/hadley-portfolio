@@ -93,6 +93,12 @@ button {
     color: $tertiary;
 }
 
+@media (min-width: 1025px) {
+    .textContainer {
+        padding: 0;
+    }
+}
+
 /* --------------------
        Navigation
 ----------------------- */
@@ -103,7 +109,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 99999;
-    background: $primary;
 }
 
 nav ul {
@@ -161,7 +166,45 @@ nav ul {
     @include flexContainer($direction: column, $gap: 2em);
 }
 
-@media (maz-width: 1025px) {
+.userCard {
+    @include flexContainer($direction: column);
+    flex: 1 1 200px;
+    padding: $padding-sm;
+}
+
+.userCard img {
+    width: 110px;
+}
+
+.userCard div {
+    flex: 2 1 200px;
+}
+
+.userCard h3 {
+    margin-block-start: 0;
+}
+
+.profilesContainer {
+    @include flexContainer();
+}
+
+#research, #outcomes, #prototype {
+    @include pageWidth();
+}
+
+.flexContainer div {
+    flex: 1 1 200px;
+}
+
+#challenge .flexContainer {
+    padding: $padding-sm;
+}
+
+#overview div {
+     flex: 1 1 200px;
+}
+
+@media (max-width: 1025px) {
     #overview .textContainer {
         @include pageWidth();
     }
@@ -199,6 +242,18 @@ nav ul {
     
     .imgContainer img {
         height: 300px;
+    }
+
+    .userCard {
+        @include flexContainer($align: center);
+    }
+
+    #challenge, #overview {
+        @include pageWidth();
+    }
+
+    #overview {
+        @include flexContainer($align: center, $gap: 2em);
     }
 }
 

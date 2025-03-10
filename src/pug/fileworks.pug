@@ -1,6 +1,13 @@
 extends portfolio-page.pug
 
 block variables
+
+    - var primary = '#f2f4ef'
+    - var secondary = '#ECF5BD'
+    - var tertiary = '#CFD9E4'
+    - var accent = '#cae155'
+    - var textColor = '#344854'
+
     - var pageTitle = 'Hadley Slucher – Fileworks'
 
     - var tagLine = 'Empowering tech company’s digital infrastructure'
@@ -48,3 +55,13 @@ block variables
     // Visual Design Elements
 
     // Outcomes
+
+    - var outcomeOne = 'The Fileworks team has established a centralized and reliable resource for internal employees, enabling them to discover how the tool significantly enhances workflows across diverse teams.'
+    
+    - var outcomeTwo = 'Refining the “what are we solving?” section of the site proved to be an invaluable experience, further honing my design expertise and pushing the boundaries of my creative capabilities.'
+    
+    - var outcomeThree = 'By developing a comprehensive pattern library, the Fileworks team now possesses a valuable asset that can be leveraged for future expansions of their site, ensuring consistency and efficiency in design implementation.'
+
+block content 
+    section#prototype 
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="550" src="https://embed.figma.com/proto/ZDofRp91X8jHR9GzxV417Y/Fileworks_Redacted?page-id=1%3A133&node-id=1-135&p=f&viewport=603%2C235%2C0.14&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A135&embed-host=share" allowfullscreen></iframe>

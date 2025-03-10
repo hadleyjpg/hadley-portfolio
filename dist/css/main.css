@@ -135,6 +135,11 @@ button {
   color: #4D4243;
 }
 
+@media (min-width: 1025px) {
+  .textContainer {
+    padding: 0;
+  }
+}
 /* --------------------
        Navigation
 ----------------------- */
@@ -149,7 +154,6 @@ header {
   position: sticky;
   top: 0;
   z-index: 99999;
-  background: #F7F5F2;
 }
 
 nav ul {
@@ -224,7 +228,55 @@ nav ul {
   gap: 2em;
 }
 
-@media (maz-width: 1025px) {
+.userCard {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 30px;
+  flex: 1 1 200px;
+  padding: 2em;
+}
+
+.userCard img {
+  width: 110px;
+}
+
+.userCard div {
+  flex: 2 1 200px;
+}
+
+.userCard h3 {
+  margin-block-start: 0;
+}
+
+.profilesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 30px;
+}
+
+#research, #outcomes, #prototype {
+  padding: 0 10%;
+}
+
+.flexContainer div {
+  flex: 1 1 200px;
+}
+
+#challenge .flexContainer {
+  padding: 2em;
+}
+
+#overview div {
+  flex: 1 1 200px;
+}
+
+@media (max-width: 1025px) {
   #overview .textContainer {
     padding: 0 10%;
   }
@@ -259,6 +311,25 @@ nav ul {
   }
   .imgContainer img {
     height: 300px;
+  }
+  .userCard {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+  }
+  #challenge, #overview {
+    padding: 0 10%;
+  }
+  #overview {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2em;
   }
 }
 /* --------------------

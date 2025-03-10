@@ -2,6 +2,17 @@ doctype html
 html(lang="en")
 
     block variables
+
+        // Styles
+
+        - var primary = ''
+        - var secondary = ''
+        - var tertiary = ''
+        - var accent = ''
+        - var textColor = ''
+
+        // Content
+
         - var pageTitle = 'Project Name'
         - var tagLine = 'Project tagline'
         - var overview = 'Overview paragraph'
@@ -20,12 +31,15 @@ html(lang="en")
         - var userTwoName = ''
         - var userTwoDesc = ''
         - var research = ''
+        - var outcomeOne = ''
+        - var outcomeTwo = ''
+        - var outcomeThree = ''
 
     head
         include includes/head 
         
         title= pageTitle
-    body
+    body(style=`background: ${primary}; color: ${textColor}`)
         include includes/nav
 
         section#hero 
@@ -49,32 +63,50 @@ html(lang="en")
                 img(src= overviewImgURL alt= overviewImgAlt )
 
         section#challenge 
-            div
-                h2 Problem/Challenges  
-                p= problem
-            div
-                h2 Objectives 
-                ul 
-                    li= objectiveOne
-                    li= objectiveTwo 
-                    li= objectiveThree
+            div.flexContainer(style=`background: ${secondary}`) 
+                div
+                    h2 Problem/Challenges  
+                    p= problem
+                div
+                    h2 Objectives 
+                    ul 
+                        li= objectiveOne
+                        li= objectiveTwo 
+                        li= objectiveThree
 
         section#research 
             .profilesContainer 
-                .userCard
+                .userCard(style=`background: ${tertiary}`)
                     img(src= userImgURL )
+                    div 
+                        h3= userOneName 
+                        p= userOneDesc 
 
-                    h3= userOneName 
-                    p= userOneDesc 
-
-                .userCard
+                .userCard(style=`background: ${tertiary}`)
                     img(src= userImgURL ) 
-
-                    h3= userTwoName 
-                    p= userTwoDesc
+                    div 
+                        h3= userTwoName 
+                        p= userTwoDesc
 
             .textContainer
                 h2 Research 
                 p= research
+
+        block content  
+
+        section#outcomes 
+            h2 Outcomes
+            .flexContainer
+                div   
+                    h3 01
+                    p=outcomeOne
+
+                div   
+                    h3 02
+                    p=outcomeTwo 
+
+                div   
+                    h3 03
+                    p=outcomeThree 
 
         include includes/footer
