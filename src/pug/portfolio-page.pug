@@ -10,6 +10,7 @@ html(lang="en")
         - var tertiary = ''
         - var accent = ''
         - var textColor = ''
+        - var textColorSecondary = ''
 
         // Content
 
@@ -63,7 +64,7 @@ html(lang="en")
                 img(src= overviewImgURL alt= overviewImgAlt )
 
         section#challenge 
-            div.flexContainer(style=`background: ${secondary}`) 
+            div.flexContainer(style=`background: ${secondary}; color: ${textColorSecondary}`) 
                 div
                     h2 Problem/Challenges  
                     p= problem

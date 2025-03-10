@@ -93,6 +93,10 @@ button {
     color: $tertiary;
 }
 
+section {
+    margin-bottom: $padding-lg;
+}
+
 @media (min-width: 1025px) {
     .textContainer {
         padding: 0;

@@ -135,6 +135,10 @@ button {
   color: #4D4243;
 }
 
+section {
+  margin-bottom: 4em;
+}
+
 @media (min-width: 1025px) {
   .textContainer {
     padding: 0;
