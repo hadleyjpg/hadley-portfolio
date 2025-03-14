@@ -1,0 +1,54 @@
+doctype html
+html(lang="en")
+
+    block variables
+
+        // Styles
+
+        - var primary = ''
+        - var secondary = ''
+        - var tertiary = ''
+        - var accent = ''
+        - var textColor = ''
+        - var textColorSecondary = ''
+
+        // Content
+
+        - var pageTitle = 'Project Name'
+        - var tagLine = 'Project tagline'
+        - var overview = 'Overview paragraph'
+        - var role = 'Role'
+        - var tools = 'Tools'
+        - var overviewImgURL = '../images/default.jpg'
+        - var overviewImgAlt = ''
+
+    head
+        include includes/head 
+        
+        title= pageTitle
+    body(style=`background: ${primary}; color: ${textColor}`)
+
+        include includes/nav
+
+        section#hero 
+            h1= tagLine
+
+        section#overview 
+            .textContainer 
+                h2 Overview 
+                p= overview 
+                .projectDetails 
+                    h3 Role 
+                    p= role 
+
+                    h3 Tools 
+                    p=tools 
+
+            .imgContainer
+                img(src= overviewImgURL alt= overviewImgAlt )
+
+        block content
+
+             
+
+        include includes/footer

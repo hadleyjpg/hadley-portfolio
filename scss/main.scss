@@ -36,6 +36,7 @@ body {
 
 a {
     @include headerStyle2(300, 16px, normal);
+    color: $tertiary;
 }
 
 a.noStyle {
@@ -251,6 +252,15 @@ article .imgContainer {
      flex: 1 1 200px;
 }
 
+#images {
+    @include pageWidth();
+    @include flexContainer($justify: center, $gap: $padding-xs);
+}
+
+#images img {
+    width: calc(50% - $padding-xs);
+}
+
 @media (max-width: 1025px) {
     #overview .textContainer {
         @include pageWidth();
@@ -291,6 +301,10 @@ article .imgContainer {
     
     .imgContainer img {
         height: 600px;
+    }
+
+    .imgContainer img {
+        height: 350px;
     }
 
     .profilesContainer {

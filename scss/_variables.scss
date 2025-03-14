@@ -17,13 +17,12 @@ $hero-height: 70vh;
     line-height: $lineHeight;
 }
 
-@mixin headerStyle2($weight, $size, $lineHeight, $color: $tertiary) {
+@mixin headerStyle2($weight, $size, $lineHeight) {
     font-family: 'Piazzolla', serif;
     font-weight: $weight;
     font-size: $size;
     line-height: $lineHeight;
     font-style: italic;
-    color: $color;
 }
 
 @mixin bodyStyle() {
