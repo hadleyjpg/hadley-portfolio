@@ -107,6 +107,10 @@ a.noStyle {
     margin-block-start: 0.5em;
     margin-block-end: 0.5em;
   }
+  h4 {
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+  }
 }
 /* --------------------
        General
@@ -284,18 +288,18 @@ article .imgContainer {
   align-items: flex-start;
   gap: 3em;
   flex: 1 1 200px;
-  padding: 3em;
+  padding: 2em;
 }
 
 .userCard img {
-  width: 110px;
+  width: 100px;
 }
 
 .userCard div {
   flex: 2 1 200px;
 }
 
-.userCard h3 {
+.userCard h4 {
   margin-block-start: 0;
 }
 
@@ -304,7 +308,7 @@ article .imgContainer {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 3em;
 }
 
@@ -317,7 +321,7 @@ article .imgContainer {
 }
 
 #challenge .flexContainer {
-  padding: 3em;
+  padding: 5em;
 }
 
 #overview div {
@@ -360,15 +364,23 @@ article .imgContainer {
     flex: 2 1 300px;
   }
   .imgContainer img {
-    height: 300px;
+    height: 600px;
+  }
+  .profilesContainer {
+    width: 85%;
+    margin: 0 auto;
   }
   .userCard {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
-    gap: 3em;
+    align-items: flex-start;
+    gap: 1.5em;
+  }
+  #research .textContainer {
+    width: 50%;
+    margin: 5em auto 0;
   }
   #challenge, #overview {
     padding: 0 10%;
@@ -380,6 +392,10 @@ article .imgContainer {
     justify-content: flex-start;
     align-items: center;
     gap: 2em;
+  }
+  #outcomes {
+    width: 65%;
+    margin: 0 auto 5em;
   }
 }
 /* --------------------
