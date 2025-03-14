@@ -4,8 +4,8 @@ $primary: #F7F5F2;
 $secondary: #E3DFE0;
 $tertiary: #4D4243;
 $accent: #CFC80C;
-$padding-lg: 4em;
-$padding-sm: 2em;
+$padding-lg: 5em;
+$padding-sm: 3em;
 $border: 1px solid $tertiary;
 $hero-height: 70vh;
 
@@ -16,12 +16,13 @@ $hero-height: 70vh;
     line-height: $lineHeight;
 }
 
-@mixin headerStyle2($weight, $size, $lineHeight) {
+@mixin headerStyle2($weight, $size, $lineHeight, $color: $tertiary) {
     font-family: 'Piazzolla', serif;
     font-weight: $weight;
     font-size: $size;
     line-height: $lineHeight;
     font-style: italic;
+    color: $color;
 }
 
 @mixin bodyStyle() {
@@ -32,7 +33,7 @@ $hero-height: 70vh;
     color: $tertiary;
 }
 
-@mixin flexContainer($direction: row, $justify: flex-start, $align: baseline, $gap: 30px) {
+@mixin flexContainer($direction: row, $justify: flex-start, $align: flex-start, $gap: $padding-sm) {
     display: flex;
     flex-wrap: wrap;
     flex-direction: $direction;
