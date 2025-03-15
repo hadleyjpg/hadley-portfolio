@@ -50,7 +50,7 @@ body {
   font-size: 14px;
   line-height: normal;
   color: #4D4243;
-  background: pink;
+  background: #F7F5F2;
 }
 
 a {
@@ -419,7 +419,7 @@ article .imgContainer {
 
 #about {
   padding-top: 30px;
-  background: pink;
+  background: #F7F5F2;
 }
 
 #about .flexContainer {
