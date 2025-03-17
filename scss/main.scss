@@ -41,6 +41,7 @@ a {
 
 a.noStyle {
     text-decoration: none;
+    font-style: normal;
 }
 
 .category {
@@ -116,6 +117,7 @@ button.solid {
     border: none;
     @include headerStyle2(300, 16px, normal);
     color: $tertiary;
+    text-decoration: none;
 }
 
 section {
@@ -306,7 +308,7 @@ nav li {
 
 .imgContainer img {
     width: 100%;
-    height: 275px;
+    height: 100%;
     object-fit: cover;
     position: relative;
 }
@@ -319,7 +321,7 @@ article .imgContainer {
     position: absolute;
     left: calc(50% - 111.61px / 2);
     right: calc(50% - 111.61px / 2);
-    bottom: -18px;
+    bottom: -20px;
 }
 
 .textContainer {
@@ -389,6 +391,10 @@ article .imgContainer {
     #work {
         gap: 0.5em;
     }
+
+    article .imgContainer {
+        height: 300px;
+    }
 }
 
 @media (min-width: 1025px) {
@@ -414,8 +420,16 @@ article .imgContainer {
         display: block;
     }
 
+    article .textContainer {
+        padding: $padding-sm;
+    }
+
+    article .textContainer h3 {
+        margin-block-start: 0;
+    }
+
     article {
-        @include flexContainer($align: center);
+        @include flexContainer($align: stretch, $gap: 1em);
     }
 
     #work article:not(:last-child) {
@@ -425,14 +439,13 @@ article .imgContainer {
 
     .imgContainer {
         flex: 1 1 300px;
+        border-radius: 25px;
+        overflow: hidden;
+        height: 350px;
     }
 
     .textContainer {
         flex: 2 1 300px;
-    }
-
-    .imgContainer img {
-        height: 350px;
     }
 
     #overview .imgContainer img {
@@ -464,6 +477,11 @@ article .imgContainer {
     #outcomes {
         width: 65%;
         margin: 0 auto $padding-lg;
+    }
+
+    a.article:hover .textContainer {
+        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='25' ry='25' stroke='%23A09295FF' stroke-width='4' stroke-dasharray='6%2c 13' stroke-dashoffset='2' stroke-linecap='square'/%3e%3c/svg%3e");
+        border-radius: 25px;
     }
 }
 

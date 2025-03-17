@@ -1,14 +1,14 @@
 mixin article(image, link, subtitle, title, category1, category2)
-    article 
-        div.imgContainer
-            a(href=link)
-                img(src=image)
-                button.solid Read more
-        div.textContainer 
-            h3= subtitle 
-            h2= title 
-            div.flexContainer.smallGap
-                div.category 
-                    p= category1
-                div.category
-                    p= category2
+    a(href=link).noStyle.article
+        article 
+            div.imgContainer
+                    img(src=image)
+                    button.solid Read more
+            div.textContainer 
+                h3= subtitle 
+                h2= title 
+                div.flexContainer.smallGap
+                    div.category 
+                        p= category1
+                    div.category
+                        p= category2
