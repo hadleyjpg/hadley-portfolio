@@ -298,13 +298,13 @@ article .imgContainer {
     .textContainer {
         flex: 2 1 300px;
     }
-    
-    .imgContainer img {
-        height: 600px;
-    }
 
     .imgContainer img {
         height: 350px;
+    }
+
+    .overview .imgContainer img {
+        height: 600px;
     }
 
     .profilesContainer {
