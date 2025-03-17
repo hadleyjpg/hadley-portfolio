@@ -11,5 +11,9 @@ footer#contact
         h3 Let's collaborate – 
             a(href="mailto:hello@hadley.work" style=`color: ${textColor}`) hello@hadley.work
     div 
-        a(href="#top" style=`color: ${textColor}`)
-            h5 Back to top    
+        button#backToTop(style=`color: ${textColor}` onclick="scrollToTop()") Back to top
+
+    script.
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }

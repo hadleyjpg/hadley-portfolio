@@ -137,6 +137,16 @@ p {
 }
 
 button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: #4D4243;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+button.solid {
   background: #CFC80C;
   padding: 10px 20px;
   border-radius: 50px;
@@ -169,6 +179,10 @@ li {
 
 li::marker {
   font-family: "Inknut Antiqua", monospace;
+}
+
+.backToTop {
+  transition: opacity 0.3s ease-in-out;
 }
 
 @media (min-width: 1025px) {
@@ -358,8 +372,7 @@ article .imgContainer {
   position: absolute;
   left: calc(50% - 55.805px);
   right: calc(50% - 55.805px);
-  top: calc(50% - 21.5px);
-  bottom: calc(50% - 21.5px);
+  bottom: -18px;
 }
 
 .textContainer {
@@ -441,8 +454,20 @@ article .imgContainer {
   #overview .textContainer {
     padding: 0 10%;
   }
+  article .textContainer {
+    padding: 2em;
+  }
+  #work {
+    gap: 0.5em;
+  }
 }
 @media (min-width: 1025px) {
+  .imgContainer button {
+    left: calc(50% - 55.805px);
+    right: calc(50% - 55.805px);
+    top: calc(50% - 21.5px);
+    bottom: calc(50% - 21.5px);
+  }
   #work {
     padding: 5em;
     padding-right: 10%;
@@ -571,6 +596,31 @@ article .imgContainer {
     padding: 0;
   }
 }
+/* --------------------
+         Footer
+----------------------- */
 footer {
   padding: 0 10%;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+footer h3 {
+  margin-block-end: 0;
+  margin-block-start: 0.5em;
+}
+
+footer h5 {
+  margin-block-end: 0;
+}
+
+@media (min-width: 1025px) {
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 3em;
+  }
 }/*# sourceMappingURL=main.css.map */

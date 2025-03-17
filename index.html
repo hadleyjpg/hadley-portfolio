@@ -46,7 +46,7 @@
     <section id="work"> 
             <article> 
               <div class="imgContainer"><a href="fileworks"><img src="images/fileworks/header.jpg">
-                  <button>Read more</button></a></div>
+                  <button class="solid">Read more</button></a></div>
               <div class="textContainer"> 
                 <h3>Fileworks</h3>
                 <h2>Introducing a new document management tool</h2>
@@ -62,7 +62,7 @@
             </article>
             <article> 
               <div class="imgContainer"><a href="paradox"><img src="images/paradox/header.jpg">
-                  <button>Read more</button></a></div>
+                  <button class="solid">Read more</button></a></div>
               <div class="textContainer"> 
                 <h3>The Paradox Show</h3>
                 <h2>A monthly showcase of creativity</h2>
@@ -78,7 +78,7 @@
             </article>
             <article> 
               <div class="imgContainer"><a href="dcim"><img src="images/dcim/header.jpg">
-                  <button>Read more</button></a></div>
+                  <button class="solid">Read more</button></a></div>
               <div class="textContainer"> 
                 <h3>DCIM</h3>
                 <h2>Empowering tech company’s digital infrastructure</h2>
@@ -94,7 +94,7 @@
             </article>
             <article> 
               <div class="imgContainer"><a href="pharmcbd"><img src="images/pharmcbd/header.jpg">
-                  <button>Read more</button></a></div>
+                  <button class="solid">Read more</button></a></div>
               <div class="textContainer"> 
                 <h3>Pharm CBD</h3>
                 <h2>Bringing CBD to another level</h2>
@@ -161,8 +161,14 @@
             <h3>Instagram </h3></a></div>
         <h3>Let's collaborate – <a href="mailto:hello@hadley.work" style="color: undefined">hello@hadley.work</a></h3>
       </div>
-      <div> <a href="#top" style="color: undefined">
-          <h5>Back to top    </h5></a></div>
+      <div> 
+        <button id="backToTop" style="color: undefined" onclick="scrollToTop()">Back to top</button>
+      </div>
+      <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      </script>
     </footer>
   </body>
 </html>
