@@ -142,16 +142,115 @@ header {
     position: sticky;
     top: 0;
     z-index: 99999;
+    min-height: 80px;
 }
 
 nav ul {
-    @include flexContainer($justify: space-between, $align: center);
+    @include flexContainer($direction: column, $align: flex-start, $gap: 1em);
     padding-inline-start: 0;
-
 }
 
 nav li {
     list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+@media (max-width: 1025px) {
+
+    nav ul, .navContainer .contactContainer {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .navContainer .flexContainer {
+        @include flexContainer($direction: column, $align: flex-start, $gap: 1em);
+    }
+
+    .contactContainer h3 {
+        margin-top: 2em;
+    }
+
+    .navLinks a, .contactContainer .flexContainer a h3 {
+        font-size: 2em;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+
+    /* Hamburger Icon */
+    .menuToggle { 
+        cursor: pointer; 
+        width: 35px; 
+        height: 20px; 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: space-between; 
+        position: relative; 
+        z-index: 100; 
+    }
+
+    .menuToggle div { 
+        width: 100%; 
+        height: 2px; 
+        background: $tertiary; 
+        transition: transform 0.3s, opacity 0.3s; 
+    }
+    
+    /* Navigation Menu */
+    .navContainer {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100vw;
+        height: 100vh;
+        background: $primary;
+        padding-top: 100px;
+        transition: left 0.4s ease-in-out;
+        @include flexContainer($direction: column, $align: flex-start, $gap: 10em);
+    }
+
+    .navLinks a {  
+        transition: color 0.3s; 
+    }
+
+    .navLinks a:hover { 
+        color: $accent; 
+    }
+
+    /* Active State - Open Menu */
+    .navActive { 
+        left: 0; 
+    }
+
+    /* Hamburger Icon Animation */
+    .menuToggle.active div:nth-child(1) { 
+        transform: translateY(9px) rotate(45deg); 
+    }
+
+    .menuToggle.active div:nth-child(2) { 
+        opacity: 0; 
+    }
+
+    .menuToggle.active div:nth-child(3) { 
+        transform: translateY(-9px) rotate(-45deg); 
+    }
+
+    .logo {
+        font-size: 1.5em;
+    }
+
+}
+
+@media (min-width: 1025px) {
+
+    nav ul {
+        @include flexContainer($justify: space-between, $align: center);
+    }
+
+    .contactContainer {
+        display: none;
+    }
+
 }
 
 /* --------------------

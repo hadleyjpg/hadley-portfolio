@@ -11,13 +11,34 @@
   </head>
   <body style="background: #11294f; color: #ffffff">
     <header style="background: #11294f"><a class="noStyle" href="index" style="color: #ffffff">
-        <h3>Hadley Slucher</h3></a>
+        <h3 class="logo">Hadley Slucher</h3></a>
       <nav>
-        <ul> 
-          <li> <a href="index/#about" style="color: #ffffff">About</a></li>
-          <li> <a href="index/#work" style="color: #ffffff">Work </a></li>
-          <li> <a href="index/#contact" style="color: #ffffff">Contact</a></li>
-        </ul>
+        <div class="menuToggle" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="navContainer">
+          <ul class="navLinks"> 
+            <li><a href="index/#about" style="color: #ffffff">About</a></li>
+            <li><a href="index/#work" style="color: #ffffff">Work </a></li>
+            <li><a href="index/#contact" style="color: #ffffff">Contact</a></li>
+          </ul>
+          <div class="contactContainer"> 
+            <h5>Follow me </h5>
+            <div class="flexContainer"><a href="https://linkedin.com/in/hadley-slucher" target="blank" style="color: #ffffff"> 
+                <h3>LinkedIn </h3></a><a href="https://github.com/hadleyjpg" target="blank" style="color: #ffffff">   
+                <h3>Github </h3></a><a href="https://instagram.com/hadley.jpg" target="blank" style="color: #ffffff">
+                <h3>Instagram </h3></a></div>
+            <h3>Let's collaborate – <a href="mailto:hello@hadley.work" style="color: #ffffff">hello@hadley.work</a></h3>
+          </div>
+        </div>
+        <script>
+          function toggleMenu() {
+              document.querySelector('.menuToggle').classList.toggle('active');
+              document.querySelector('.navContainer').classList.toggle('navActive');
+          }
+        </script>
       </nav>
     </header>
     <section id="hero"> 
