@@ -153,6 +153,10 @@ section {
   margin-bottom: 5em;
 }
 
+section#work, section#about {
+  margin-bottom: 0;
+}
+
 ul {
   padding-inline-start: 1em;
 }
@@ -309,13 +313,14 @@ nav li {
   gap: 3em;
   padding: 0 10%;
   min-height: 70vh;
-  /* position: fixed;
-  z-index: -1; */
 }
 
-/* .scrollContainer {
-    min-height: $hero-height;
-} */
+#hero.parallax {
+  position: sticky;
+  top: 80px;
+  z-index: -1;
+}
+
 #hero h1 {
   width: 80%;
 }
