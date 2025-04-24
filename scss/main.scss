@@ -120,10 +120,6 @@ button.solid {
     text-decoration: none;
 }
 
-section {
-    margin-bottom: $padding-lg;
-}
-
 section#work, section#about {
     margin-bottom: 0;
 }
@@ -144,6 +140,10 @@ li::marker {
 
 .backToTop {
     transition: opacity 0.3s ease-in-out;
+}
+
+.secondaryBG {
+    background: $secondary;
 }
 
 @media (min-width: 1025px) {
@@ -406,7 +406,7 @@ article .imgContainer {
         bottom: calc(50% - 43px / 2);
     }
 
-    #work {
+    #work, .flushRight {
         padding: $padding-lg;
         padding-right: 10%;
         margin-left: 10%;
