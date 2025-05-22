@@ -506,7 +506,6 @@ article .imgContainer {
     flex: 1 1 300px;
     border-radius: 25px;
     overflow: hidden;
-    height: 350px;
   }
   .textContainer {
     flex: 2 1 300px;
