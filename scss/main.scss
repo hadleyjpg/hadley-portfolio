@@ -379,6 +379,10 @@ article .imgContainer {
     width: calc(50% - $padding-xs);
 }
 
+body.portfolio section {
+    margin-bottom: 5em;
+}
+
 @media (max-width: 1025px) {
     #overview .textContainer {
         @include pageWidth();
